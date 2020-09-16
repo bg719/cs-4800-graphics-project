@@ -8,4 +8,4 @@
 
 ### Links:
 
- - [Piscine, Céleste Boursier-Mougenot - domaine de Chamarande (Essonne)](https://www.youtube.com/watch?v=dPp3qp6cF4g)
+ - [Piscine, Céleste Boursier-Mougenot - domaine de Chamarande (Essonne)](https://www.youtube.com/watch?v=dPp3qp6cF4g) : Another video of the exhibit, but with a static, overhead camera angle. 
