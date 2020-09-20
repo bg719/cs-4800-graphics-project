@@ -6,8 +6,8 @@
 - [Zero to Hero: A Quick Guide to Object Tracking: MDNET, GOTURN, ROLO](https://cv-tricks.com/object-tracking/quick-guide-mdnet-goturn-rolo/)
 - [Zero to Hero: Guide to Object Detection using Deep Learning: Faster R-CNN, YOLO, SSD](https://cv-tricks.com/object-detection/faster-r-cnn-yolo-ssd/)
 - [GOTURN: Deep Learning based Object Tracking](https://www.learnopencv.com/goturn-deep-learning-based-object-tracking/)
- - [Object Tracking using OpenCV](https://www.learnopencv.com/object-tracking-using-opencv-cpp-python/)
- - [MultiTracker: Multiple Object Tracking using OpenCV](https://www.learnopencv.com/multitracker-multiple-object-tracking-using-opencv-c-python/)
+- [Object Tracking using OpenCV](https://www.learnopencv.com/object-tracking-using-opencv-cpp-python/)
+- [MultiTracker: Multiple Object Tracking using OpenCV](https://www.learnopencv.com/multitracker-multiple-object-tracking-using-opencv-c-python/)
 
 ## **Notes**
 
