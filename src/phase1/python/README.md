@@ -1,4 +1,4 @@
-# Python Code for Phase 1
+# Phase 1 Python Code
 A repository for Python code developed in Phase 1. 
 
 ## Files:
