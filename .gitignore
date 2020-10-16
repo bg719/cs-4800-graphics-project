@@ -94,6 +94,12 @@ $RECYCLE.BIN/
 # Local History for Visual Studio Code
 .history/
 
+##################################################
+# Ignore Python/Pycharm files
+################################################## 
+
+src/**/.idea
+
 
 ##################################################
 # Ignore Microsoft Office Files
