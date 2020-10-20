@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+import argparse
 from os import listdir, makedirs
 from os.path import exists, join, splitext
 from shutil import copy
@@ -27,17 +27,35 @@ def get_files_by_ext(dir_path, file_ext):
     return [f for f in listdir(dir_path) if splitext(f)[1] == file_ext]
 
 
-def main(argv):
-    src_dir_path = '/Users/brycegeorge/Git/cs-4800-graphics-project/Data/bowl_data'
-    dest_dir_path = '/Users/brycegeorge/Git/bowls2'
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("src", help="The full path to the source data directory containing the images and annotations.",
+                        type=str)
+    parser.add_argument("dest", help="The full path to the destination directory for the data set.",
+                        type=str)
+    parser.add_argument("-tp", "--train-percent", help="The decimal value representing the percentage of samples "
+                        "to add to the training set (the rest are added to the validation set).",
+                        type=float, action="store", default=0.8, dest="tp")
+    parser.add_argument("-ix", "--img-ext", help="The file extension of sample images.",
+                        type=str, action="store", default=".jpg", dest="ix")
+    parser.add_argument("-ax", "--ann-ext", help="The file extension of image annotations.",
+                        type=str, action="store", default=".xml", dest="ax")
+    parser.add_argument("-id", "--img-src", help="The image directory within the src directory.",
+                        type=str, action="store", default="images", dest="id")
+    parser.add_argument("-ad", "--ann-src", help="The annotation directory within the src directory.",
+                        type=str, action="store", default="annotations", dest="ad")
+    args = parser.parse_args()
 
-    percent_train = 0.8
+    src_dir_path = args.src
+    dest_dir_path = args.dest
 
-    img_file_ext = '.jpg'
-    ann_file_ext = '.xml'
+    percent_train = args.tp  # default = 0.8
 
-    img_src_dir = join(src_dir_path, 'images')
-    ann_src_dir = join(src_dir_path, 'annotations')
+    img_file_ext = args.ix  # default = '.jpg'
+    ann_file_ext = args.ax  # default = '.xml'
+
+    img_src_dir = join(src_dir_path, args.id)
+    ann_src_dir = join(src_dir_path, args.ad)
     train_dir = join(dest_dir_path, 'train')
     validation_dir = join(dest_dir_path, 'validation')
 
