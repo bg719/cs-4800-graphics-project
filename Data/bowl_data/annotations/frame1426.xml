@@ -1,7 +1,7 @@
 <annotation>
 	<folder>VideoFrames2</folder>
 	<filename>frame1426.jpg</filename>
-	<path>C:\Users\Colin Henson\Desktop\SupportforProcess\VideoFrames2\frame1426.jpg</path>
+	<path>/Users/brycegeorge/Git/cs-4800-graphics-project/Data/VideoFrames2/frame1426.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -453,6 +453,30 @@
 			<ymin>299</ymin>
 			<xmax>451</xmax>
 			<ymax>327</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bowl</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>268</xmin>
+			<ymin>14</ymin>
+			<xmax>300</xmax>
+			<ymax>24</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bowl</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>386</xmin>
+			<ymin>333</ymin>
+			<xmax>427</xmax>
+			<ymax>345</ymax>
 		</bndbox>
 	</object>
 </annotation>
