@@ -42,10 +42,10 @@ def create_tracker(tracker_type='CSRT'):
 
 def frame_generator(video_src='video.avi'):
     """
-    Extracts the frames from the video file and yield returns them one at a time.
+    Extracts the frames from the video source and yield returns them one at a time.
 
-    :param video_src:
-    :return:
+    :param video_src: the video source file
+    :returns: the frame number and the image
     """
     # create new video capture
     capture = cv2.VideoCapture(video_src)
@@ -59,6 +59,8 @@ def frame_generator(video_src='video.avi'):
     while success:
         # yield the frame and its number
         yield count, image
+
+        # get the next frame from the source
         success, image = capture.read()
         count += 1
 
@@ -66,7 +68,7 @@ def frame_generator(video_src='video.avi'):
 
 
 def track_video(video_src='video.avi'):
-
+    return
 
 
 if __name__ == "__main__":
