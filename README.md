@@ -8,8 +8,8 @@ The objective of this research is to develop a method for enhancing human visual
 
 Using a custom trained YOLO_V3 detector, we are able to identify the bowls visible in the video.
 
-![3 Pools Detected with YOLO_V3](https://media.giphy.com/media/ZLRVNXLVWGOnwqygYE/giphy.gif)
+![3 Pools Detected with YOLO_V3](demos/yolo_v3.gif)
 
 Our prototype demonstrates how the YOLO_V3 object detection applied to the first frame can be used to initialized CSRT trackers for the bowls in the scene. Thereafter, the prototype relies on the tracker algorithm to locate bowl's positions. 
 
-![1 Pool Detected with YOLO_V3 tracked with CSRT](https://media.giphy.com/media/zCJZhiNrrEb3Ggm0d3/giphy.gif)
+![1 Pool Detected with YOLO_V3 tracked with CSRT](demos/prototype.gif)
