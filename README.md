@@ -10,6 +10,6 @@ Using a custom trained YOLO_V3 detector, we are able to identify the bowls visib
 
 ![3 Pools Detected with YOLO_V3](demos/yolo_v3.gif)
 
-Our prototype demonstrates how the YOLO_V3 object detection applied to the first frame can be used to initialize CSRT trackers for each bowl in the scene. Thereafter, the prototype relies on the tracker algorithm to locate bowl's positions. 
+Our prototype demonstrates how the YOLO_V3 object detection applied to the first frame can be used to initialize CSRT trackers for each bowl in the scene. Thereafter, the prototype relies on the tracker algorithm to locate each bowl's positions. 
 
 ![1 Pool Detected with YOLO_V3 tracked with CSRT](demos/prototype.gif)
