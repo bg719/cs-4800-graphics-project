@@ -8,7 +8,7 @@ A repository for Python code developed in Phase 2.
 a  Multi-Tracker object. This prototype runs object detection on the first frame of the video and passes the bounding boxes of the discovered objects to the 
 OpenCV trackers to monitor for the remainder of the video. 
 
-    ![Prototype output](../../demos/prototype.gif)
+    ![Prototype output](../../../demos/prototype.gif)
 
 * `ModelEvaluation.py` : A script for evaluating YOLO_V3 object models generated using ImageAI.
 
