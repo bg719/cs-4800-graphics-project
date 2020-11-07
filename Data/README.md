@@ -4,9 +4,13 @@ A central directory for data related to the project.
 
 ### Data Sets:
 
-* `bowls.zip` : Our initial training data set with an 80-20 split between training and validation and approximately 200 frames.
+* `bowls.zip` : Our initial training data set with an 80-20 split between training and validation samples and approximately 200 frames.
 
 * `bowls2.zip` : A larger data set including the initial set with an additional ~100 frames and the same training-validation proportions.
+
+* `bowlsV2.zip` : The collection of images and annotations used to create `bowls2.zip`.
+
+* `SinglePoolVideos.zip` : A collection of test video segments showing only one pool from the original video. 
 
 ### Sub-Directories:
 
