@@ -6,7 +6,7 @@ The objective of this research is to develop a method for enhancing human visual
 
 ### Object Detection and Tracking
 
-Using a custom trained YOLO_V3 detector, we are able to identify the bowls visible in the video.
+Using a custom trained YOLO_V3 detector, we are able to identify the bowls visible in each frame of the video.
 
 ![3 Pools Detected with YOLO_V3](demos/yolo_v3.gif)
 
