@@ -2,7 +2,7 @@
 
 A central directory for documentation related to the project. 
 
-### Current Contents:
+### Files:
 
 * `Abstract.docx` : The project abstract.
 
