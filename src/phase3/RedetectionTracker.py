@@ -10,17 +10,14 @@ import time
 
 def create_tracker(tracker_type):
     tracker = None
-    # Kernelized Correlation Filter
-    if tracker_type == "KCF":
+
+    if tracker_type == "KCF":  # Kernelized Correlation Filter
         tracker = cv2.TrackerKCF_create()
-    # General Object using Regression Networks
-    elif tracker_type == "GOTURN":
+    elif tracker_type == "GOTURN":  # General Object using Regression Networks
         tracker = cv2.TrackerGOTURN_create()
-    # Discriminative Correlation Filter tracker with Channel and Spacial Reliability
-    elif tracker_type == "CSRT":
+    elif tracker_type == "CSRT":  # Discriminative Correlation Filter tracker with Channel and Spacial Reliability
         tracker = cv2.TrackerCSRT_create()
-    # Defaults to None
-    else:
+    else:  # Defaults to None
         tracker = None
 
     return tracker
@@ -56,11 +53,10 @@ def convert_box_coords(box_list):
 
 
 def create_color():
-    return (randint(0, 255), randint(0, 255), randint(0, 255))
+    return randint(0, 255), randint(0, 255), randint(0, 255)
 
 
 def draw_bounding_boxes(vid_frame, found_boxes, colors):
-
     for i, newbox in enumerate(found_boxes):
         p1 = (int(newbox[0]), int(newbox[1]))
         p2 = (int(newbox[0] + newbox[2]), int(newbox[1] + newbox[3]))
@@ -69,9 +65,10 @@ def draw_bounding_boxes(vid_frame, found_boxes, colors):
 
     return frame
 
-def get_multitracker():
 
+def get_multitracker():
     return cv2.MultiTracker_create()
+
 
 def calc_detected_centroids(detections):
     centroids = []
@@ -87,11 +84,11 @@ def calc_tracked_centroids(detections):
     centroids = []
 
     for box_points in detections:
-
         centerCord = (box_points[0] + (box_points[2]/2), box_points[1] + (box_points[3]/2))
         centroids.append(centerCord)
 
     return centroids
+
 
 def find_nearest(detected_centroids, tracked_centroids):
     detected_points = np.array(detected_centroids)
@@ -99,7 +96,9 @@ def find_nearest(detected_centroids, tracked_centroids):
 
     nbrs = NearestNeighbors(n_neighbors=len(detected_points), algorithm='ball_tree').fit(detected_points)
     distances, indices = nbrs.kneighbors(tracked_points)
+
     return distances, indices
+
 
 if __name__ == "__main__":
     vid_name = 'mygeneratedvideo.mp4'
@@ -109,7 +108,7 @@ if __name__ == "__main__":
     # Counter for frames
     count = 0
     detection_interval = 10
-    margin_scalar = 0.5
+    margin_scalar = 10
 
     cap = cv2.VideoCapture(vid_name)
     frame_width = int(cap.get(3))
@@ -165,7 +164,7 @@ if __name__ == "__main__":
             detected_centroids = calc_detected_centroids(dif)
             tracked_centroids = calc_tracked_centroids(boxes)
 
-            # Find the nearest neighbor in the detected set to the tracked set
+            # Find the nearest neighbor in the tracked set to the detected set for each object
             nearest = find_nearest(detected_centroids, tracked_centroids)
 
             for i in range(len(nearest[0])):
